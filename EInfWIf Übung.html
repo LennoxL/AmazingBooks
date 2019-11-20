@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<style>
+    h1 {
+        color: aquamarine;
+        text-decoration: underline;
+    }
+</style>
+
+<head>
+    <title>Erste Seite Mo 9-11</title>
+    <script>alert("hallo")</script>
+</head>
+
+<body>
+    <footer>Die Fu&szligzeile</footer>
+    <header>
+        <h1>1. &Uuml;berschrift</h1>
+    </header>
+    <nav>
+        <ol>
+            <li>Start</li>
+            <li>1</li>
+            <li>2</li>
+        </ol>
+    </nav>
+    <section id="formular">
+        <form name="MeinFormular" id="myform" method="get">
+            <label for="vname">Vorname:
+                <input type="text" name="Vorname " id="vname" placeholder="Vorname" />
+            </label>
+            <br>
+
+            <label for="male">maennliche
+                <input type="radio" name="geschlecht" id="male" value="male">
+            </label>
+            <label for="female">weiblich
+                <input type="radio" name="geschlecht" id="female" value="female">
+                <br>
+            </label>
+
+            <label>ueber 18
+                <input type="checkbox" name="altgenug" id="alter" value="ja" />
+            </label>
+            <br>
+            <label>E-Mail: <input type="email" name="E-Mail"></label>
+
+            <input type="submit" value="Senden" />
+            <br><br><br><br>
+
+            <form action="#">
+                <input type="search" list="Produktkatalog" />
+                <datalist id="Produktkatalog">
+                    <option value="Stuhl">
+                    <option value="Tisch">
+                    <option value="Lampe">
+                    <option value="Teppich">
+                    <option value="Teppich">
+                    <option value="Sofa">
+                </datalist>
+                <input type="submit">
+            </form>
+            <select name="Zahlung" id="payment" size="5">
+                <option value="paypal">PayPal</option>
+                <option value="kreditkarte">Kreditkarte</option>
+            </select>
+    </section>
+
+
+
+
+
+
+
+</body>
