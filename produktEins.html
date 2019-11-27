@@ -1,8 +1,37 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--Landing Page-->
 <html>
     <head>
-        <title>Webshop-Warenkorb</title>
+        <title>Produkt1</title>
+        <link rel = 'stylesheet' href = 'CSS\Webshop-CSS.css'>
     </head>
-    <body>
+        <body>
+            <header>
+                    <div class="navbar">
+                            <a href="./index.html">Indexseite</a>
+                            <a href="./kontakt.html">Contact</a>
+                            <a href="./produktseite.html">Produkübersicht</a>
+                            <a href="./Warenkorb.html"><img src="./Bilder/Warenkorb.jpg" alt="Warenkorb" height="30"></a>
+                          </div>
+            </header>
+        <h1>Produkt1</h1>
+        <img src="./Bilder/Skyline.JPG" class="produktbilder">
+        <div class="produktbeschreibung">
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        </div>
+        <form>
+            <div class="kaufen">
+                <label for="preis1">Preis:</label>
+                <input type="text" id="preis1" name="preis1" value = "50 Goldmünzen" disabled>
+                <label for="anzahl1">Anzahl:</label>
+                <input type="number" id="anzahl1" name="anzahl1" step="1" style="width: 30px;">
+                <input type="submit" value="In Warenkorb packen">
+            </div>
+        </form>
     </body>
+    <footer>
+            <p>Posted by: Gruppe D</p>
+            <p>Contact information: <a href="mailto:someone@example.com">someone@example.com</a></p>
+            <p><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
+            <p><a href="impressum.html">Impressum</a></p>
+    </footer>
 </html>

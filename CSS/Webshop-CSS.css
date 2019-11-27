@@ -27,3 +27,20 @@ footer {
   background-color: #4CAF50;
   color: white;
 }
+.produkte img {
+  height: 100px;
+}
+.produktbilder {
+  height: 250px;
+}
+.produktbeschreibung {
+  width: 600px;
+  position: absolute;
+  top: 135px;
+  left: 400px;
+}
+.kaufen {
+  position: absolute;
+  top: 380px;
+  left: 400px;
+}
