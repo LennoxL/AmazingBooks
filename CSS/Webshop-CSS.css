@@ -29,7 +29,7 @@ footer {
 }
 .produkte img {
   height: 300px;
-  margin: 20px;
+  margin-top: 15px;
 }
 .produktbilder {
   height: 400px;
@@ -46,4 +46,9 @@ footer {
   position: absolute;
   top: 380px;
   left: 400px;
+}
+details{
+  background-color: gray;
+  padding: 10px;
+  font-size: 25px;
 }
