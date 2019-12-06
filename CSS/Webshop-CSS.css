@@ -52,3 +52,12 @@ details{
   padding: 10px;
   font-size: 25px;
 }
+.warenkorbProduktbilder {
+  height: 100px;
+}
+table th {
+  width: 100px;
+}
+table td {
+  text-align: center;
+}
