@@ -2,7 +2,10 @@
 <html>
     <head>
         <title>Webshop-Warenkorb</title>
-              <link rel = 'stylesheet' href = 'CSS\Webshop-CSS.css'>
+        <link rel = 'stylesheet' href = 'CSS\Webshop-CSS.css'>
+        <script>
+            document.getElementById("anzahl1").innerHTML = localStorage.getItem("anzahlvalue");
+        </script>
     </head>
     <body>
         <header>
@@ -14,7 +17,24 @@
                       </div>
         </header>
         <h1>Warenkorb</h1>
-
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Buch</th>
+                    <th>Anzahl</th>
+                    <th>Preis</th>
+                </tr>
+                <tr> <!--Produkt 1-->
+                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Eragon</td>
+                    <td><span id="anzahl1"></span></td>
+                    <td>50 GMZ</td>
+                </tr>
+                <tr>
+                    <td>Endpreis</td>
+                    <td>Ipsem</td>
+                </tr>
+            </table>
         <form action="erfolgreicherEinkauf.html">
             <input type="submit" name="warenkorbKaufen" id="warenkorbKaufen" value="Kaufen">
         </form>
