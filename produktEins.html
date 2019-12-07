@@ -6,7 +6,8 @@
         <script>
             function passvalues()
             {
-                localStorage.setItem("anzahlvalue", document.getElementById("anzahl1").value);
+                var anzahl = document.getElementById("anzahl1").value;
+                localStorage.setItem(anzahlvalue, anzahl);
             }
         </script>
     </head>
