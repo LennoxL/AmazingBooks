@@ -3,9 +3,6 @@
     <head>
         <title>Webshop-Warenkorb</title>
         <link rel = 'stylesheet' href = 'CSS\Webshop-CSS.css'>
-        <script>
-            document.getElementById("anzahl1").innerHTML = localStorage.getItem("anzahlvalue");
-        </script>
     </head>
     <body>
         <header>
@@ -41,6 +38,11 @@
         <form action="produktseite.html">
             <input type="submit" name="weiterShoppen" id="weiterShoppen" value="Einkauf fortsetzen">
         </form>
+
+        <script>
+            document.getElementById("anzahl1").innerHTML = localStorage.getItem("anzahlvalue");
+             //alert(pups);
+        </script>
         
     </body>
     <footer>

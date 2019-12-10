@@ -3,13 +3,6 @@
     <head>
         <title>Produkt1</title>
         <link rel = 'stylesheet' href = 'CSS\Webshop-CSS.css'>
-        <script>
-            function passvalues()
-            {
-                var anzahl = document.getElementById("anzahl1").value;
-                localStorage.setItem("anzahlvalue", anzahl);
-            }
-        </script>
     </head>
         <body>
             <header>
@@ -26,16 +19,23 @@
         <p>Als Eragon auf der Jagd einen glänzenden blauen Stein findet, ahnt er nicht, dass dieser Fund sein Leben verändern wird. Doch plötzlich rührt sich der Stein. Feine Risse zeichnen sich auf seiner Oberfläche ab – ein Drachenjunges entschlüpft der Schale und es beschert Eragon ein Vermächtnis, das älter ist als die Welt …
 Über Nacht wird Eragon in eine schicksalhafte Welt voller Magie und Macht geworfen. Elfen, Zwerge und Monster bevölkern Alagaesia, dessen grenzenlos grausamer Herrscher das Volk unterjocht. Mit nichts als einem Schwert und den Ratschlägen seines Lehrmeisters stellt sich Eragon dem Kampf gegen das Böse. An seiner Seite Saphira, der blaue Drache. Wird Eragon das Erbe der legendären Drachenreiter antreten können? Das Schicksal aller liegt in seiner Hand 
         </div>
-        <form action="Warenkorb.html"> 
+        <form action="Warenkorb.html" id="form1"> 
             <div class="kaufen">
                 <label for="preis1">Preis:</label>
                 <input type="text" id="preis1" name="preis1" value = "50 Goldmünzen" disabled>
                 <label for="anzahl1">Anzahl:</label>
                 <input type="number" value="30" id="anzahl1" step="1" style="width: 30px;"/>
-                <input type="submit" value="In Warenkorb packen" onclick="passvalues();">
+                <input type="submit" value="In Warenkorb packen"> <!--onclick="passvalues();-->
             </div>
         </form>
     </body>
+    <script>
+            document.getElementById("form1").onsubmit = function passvalues()
+            {
+                var anzahl = document.getElementById("anzahl1").value;
+                localStorage.setItem("anzahlvalue", anzahl);
+            }
+    </script>
     <footer>
             <p>Posted by: Gruppe D</p>
             <p>Contact Information: <a href="mailto:someone@example.com">someone@example.com</a></p>
