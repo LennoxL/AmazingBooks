@@ -21,15 +21,45 @@
                     <th>Anzahl</th>
                     <th>Preis</th>
                 </tr>
+
                 <tr> <!--Produkt 1-->
                     <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
                     <td>Eragon</td>
                     <td><span id="anzahl1"></span></td>
-                    <td><span id="preis1"></span> GZM</td>
+                    <td><span id="preis1"></span> GMZ</td>
                 </tr>
+
+                <tr> <!--Produkt 2-->
+                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Eragon</td>
+                    <td><span id="anzahl2"></span></td>
+                    <td><span id="preis2"></span> GMZ</td>
+                </tr>
+
+                <tr> <!--Produkt 3-->
+                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Eragon</td>
+                    <td><span id="anzahl3"></span></td>
+                    <td><span id="preis3"></span> GMZ</td>
+                </tr>
+
+                <tr> <!--Produkt 4-->
+                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Eragon</td>
+                    <td><span id="anzahl4"></span></td>
+                    <td><span id="preis4"></span> GMZ</td>
+                </tr>
+
+                <tr> <!--Produkt 5-->
+                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Eragon</td>
+                    <td><span id="anzahl5"></span></td>
+                    <td><span id="preis5"></span> GMZ</td>
+                </tr>
+
                 <tr>
                     <td>Endpreis</td>
-                    <td><span id="endpreis"></span> GZM</td>
+                    <td><span id="endpreis"></span> GMZ</td>
                 </tr>
             </table>
         <form action="erfolgreicherEinkauf.html">
@@ -41,13 +71,26 @@
 
         <script>
             var PreisAllerProdukte = 50;
-            var AnzahlProduktEins = localStorage.getItem("anzahlvalue");
 
+            var AnzahlProduktEins = localStorage.getItem("anzahlEins");
+            //var AnzahlProduktZwei = localStorage.getItem("anzahlZwei");
+            //var AnzahlProduktDrei = localStorage.getItem("anzahlDrei");
+            //var AnzahlProduktVier = localStorage.getItem("anzahlVier");
+            //var AnzahlProduktFuenf = localStorage.getItem("anzahlFuenf");
 
             document.getElementById("anzahl1").innerHTML = AnzahlProduktEins;
-            document.getElementById("preis1").innerHTML = PreisAllerProdukte;
+            //document.getElementById("anzahl2").innerHTML = AnzahlProduktZwei;
+            //document.getElementById("anzahl3").innerHTML = AnzahlProduktDrei;
+            //document.getElementById("anzahl4").innerHTML = AnzahlProduktVier;
+            //document.getElementById("anzahl5").innerHTML = AnzahlProduktFuenf;
 
-            document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins;
+            document.getElementById("preis1").innerHTML = PreisAllerProdukte;
+            //document.getElementById("preis2").innerHTML = PreisAllerProdukte;
+            //document.getElementById("preis3").innerHTML = PreisAllerProdukte;
+            //document.getElementById("preis4").innerHTML = PreisAllerProdukte;
+            //document.getElementById("preis5").innerHTML = PreisAllerProdukte;
+
+            document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins; //+(PreisAllerProdukte*AnzahlProduktZwei)+(PreisAllerProdukte*AnzahlProduktDrei)+(PreisAllerProdukte*AnzahlProduktVier)+(PreisAllerProdukte*AnzahlProduktFuenf)
         </script>
         
     </body>
