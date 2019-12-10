@@ -25,11 +25,11 @@
                     <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
                     <td>Eragon</td>
                     <td><span id="anzahl1"></span></td>
-                    <td>50 GMZ</td>
+                    <td><span id="preis1"></span> GZM</td>
                 </tr>
                 <tr>
                     <td>Endpreis</td>
-                    <td>Ipsem</td>
+                    <td><span id="endpreis"></span> GZM</td>
                 </tr>
             </table>
         <form action="erfolgreicherEinkauf.html">
@@ -40,8 +40,14 @@
         </form>
 
         <script>
-            document.getElementById("anzahl1").innerHTML = localStorage.getItem("anzahlvalue");
-             //alert(pups);
+            var PreisAllerProdukte = 50;
+            var AnzahlProduktEins = localStorage.getItem("anzahlvalue");
+
+
+            document.getElementById("anzahl1").innerHTML = AnzahlProduktEins;
+            document.getElementById("preis1").innerHTML = PreisAllerProdukte;
+
+            document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins;
         </script>
         
     </body>
