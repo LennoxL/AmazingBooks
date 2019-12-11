@@ -30,35 +30,42 @@
                 </tr>
 
                 <tr> <!--Produkt 2-->
-                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
-                    <td>Eragon</td>
+                    <td><img src="./Bilder/DasPaket.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Das Paket</td>
                     <td><span id="anzahl2"></span></td>
                     <td><span id="preis2"></span> GMZ</td>
                 </tr>
 
                 <tr> <!--Produkt 3-->
-                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
-                    <td>Eragon</td>
+                    <td><img src="./Bilder/GregsTagebuch.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Gregs Tagebuch</td>
                     <td><span id="anzahl3"></span></td>
                     <td><span id="preis3"></span> GMZ</td>
                 </tr>
 
                 <tr> <!--Produkt 4-->
-                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
-                    <td>Eragon</td>
+                    <td><img src="./Bilder/Grimms_Märchen.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Grimms Märchen</td>
                     <td><span id="anzahl4"></span></td>
                     <td><span id="preis4"></span> GMZ</td>
                 </tr>
 
                 <tr> <!--Produkt 5-->
-                    <td><img src="./Bilder/Eragon.jpeg" class="warenkorbProduktbilder"></td>
-                    <td>Eragon</td>
+                    <td><img src="./Bilder/Kochbuch.jpeg" class="warenkorbProduktbilder"></td>
+                    <td>Kochbuch</td>
                     <td><span id="anzahl5"></span></td>
                     <td><span id="preis5"></span> GMZ</td>
                 </tr>
-
                 <tr>
-                    <td>Endpreis</td>
+                    <td></td>
+                    <td></td>
+                    <th>Gesamtanzahl</th>
+                    <th>Endpreis</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><span id="gesamtanzahl"></span></td>
                     <td><span id="endpreis"></span> GMZ</td>
                 </tr>
             </table>
@@ -73,30 +80,31 @@
             var PreisAllerProdukte = 50;
 
             var AnzahlProduktEins = localStorage.getItem("anzahlEins");
-            //var AnzahlProduktZwei = localStorage.getItem("anzahlZwei");
-            //var AnzahlProduktDrei = localStorage.getItem("anzahlDrei");
-            //var AnzahlProduktVier = localStorage.getItem("anzahlVier");
-            //var AnzahlProduktFuenf = localStorage.getItem("anzahlFuenf");
+            var AnzahlProduktZwei = localStorage.getItem("anzahlZwei");
+            var AnzahlProduktDrei = localStorage.getItem("anzahlDrei");
+            var AnzahlProduktVier = localStorage.getItem("anzahlVier");
+            var AnzahlProduktFuenf = localStorage.getItem("anzahlFuenf");
 
             document.getElementById("anzahl1").innerHTML = AnzahlProduktEins;
-            //document.getElementById("anzahl2").innerHTML = AnzahlProduktZwei;
-            //document.getElementById("anzahl3").innerHTML = AnzahlProduktDrei;
-            //document.getElementById("anzahl4").innerHTML = AnzahlProduktVier;
-            //document.getElementById("anzahl5").innerHTML = AnzahlProduktFuenf;
+            document.getElementById("anzahl2").innerHTML = AnzahlProduktZwei;
+            document.getElementById("anzahl3").innerHTML = AnzahlProduktDrei;
+            document.getElementById("anzahl4").innerHTML = AnzahlProduktVier;
+            document.getElementById("anzahl5").innerHTML = AnzahlProduktFuenf;
 
             document.getElementById("preis1").innerHTML = PreisAllerProdukte;
-            //document.getElementById("preis2").innerHTML = PreisAllerProdukte;
-            //document.getElementById("preis3").innerHTML = PreisAllerProdukte;
-            //document.getElementById("preis4").innerHTML = PreisAllerProdukte;
-            //document.getElementById("preis5").innerHTML = PreisAllerProdukte;
+            document.getElementById("preis2").innerHTML = PreisAllerProdukte;
+            document.getElementById("preis3").innerHTML = PreisAllerProdukte;
+            document.getElementById("preis4").innerHTML = PreisAllerProdukte;
+            document.getElementById("preis5").innerHTML = PreisAllerProdukte;
 
-            document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins; //+(PreisAllerProdukte*AnzahlProduktZwei)+(PreisAllerProdukte*AnzahlProduktDrei)+(PreisAllerProdukte*AnzahlProduktVier)+(PreisAllerProdukte*AnzahlProduktFuenf)
+            document.getElementById("gesamtanzahl").innerHTML = AnzahlProduktEins + AnzahlProduktZwei + AnzahlProduktDrei + AnzahlProduktVier + AnzahlProduktFuenf;
+            document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins + (PreisAllerProdukte*AnzahlProduktZwei)+(PreisAllerProdukte*AnzahlProduktDrei)+(PreisAllerProdukte*AnzahlProduktVier)+(PreisAllerProdukte*AnzahlProduktFuenf);
         </script>
         
     </body>
     <footer>
-            <p>Posted by: Gruppe D</p>
+            <!--<p>Posted by: Gruppe D</p>
             <p><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
-            <p><a href="impressum.html">Impressum</a></p>
+            <p><a href="impressum.html">Impressum</a></p> -->
     </footer>
 </html>

@@ -53,11 +53,15 @@ details{
   font-size: 25px;
 }
 .warenkorbProduktbilder {
-  height: 100px;
+  height: 80px;
 }
 table th {
   width: 100px;
 }
 table td {
   text-align: center;
+}
+table, th,td {
+  border: 1px solid black;
+  border-collapse: collapse;
 }
