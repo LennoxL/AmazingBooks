@@ -1,8 +1,44 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--Landing Page-->
 <html>
     <head>
-        <title>Webshop-Warenkorb</title>
+        <title>Produkt5</title>
+        <link rel = 'stylesheet' href = 'CSS\Webshop-CSS.css'>
     </head>
-    <body>
+        <body>
+            <header>
+                    <div class="navbar">
+                            <a href="./index.html">Indexseite</a>
+                            <a href="./kontakt.html">Contact</a>
+                            <a href="./produktseite.html">Produkübersicht</a>
+                            <a href="./Warenkorb.html"><img src="./Bilder/Warenkorb.jpg" alt="Warenkorb" height="30"></a>
+                          </div>
+            </header>
+        <h1>Produkt 5</h1>
+        <img src="./Bilder/KochbuchVerzerrt.jpeg" class="produktbilder">
+        <div class="produktbeschreibung">
+        <p>Mit dem Kochbuch für Kinder von Ali Mitgutsch und seinen Küchenhelferchen zaubern Sie kinderleicht Gerichte, die einfach zu kochen sind und jedem schmecken. Piraten, Ritter und Gespenster helfen mit genauen Zutatenlisten, Schritt-für-Schritt-Anleitungen, zusätzlichen Kochtipps, farbigen Fotos und Informationen über gesunde Ernährung für garantiertes Gelingen.</p>
+        </div>
+        <form action="Warenkorb.html" id="form5"> 
+            <div class="kaufen">
+                <label for="preis5">Preis:</label>
+                <input type="text" id="preis5" name="preis5" value = "50 Goldmünzen" disabled>
+                <label for="anzahl5">Anzahl:</label>
+                <input type="number" value="30" id="anzahl5" step="1" style="width: 30px;"/>
+                <input type="submit" value="In Warenkorb packen"> <!--onclick="passvalues();-->
+            </div>
+        </form>
     </body>
+    <script>
+            document.getElementById("form5").onsubmit = function passvalues()
+            {
+                var anzahl = document.getElementById("anzahl5").value;
+                localStorage.setItem("anzahlFuenf", anzahl);
+            }
+    </script>
+    <footer>
+            <p>Posted by: Gruppe D</p>
+            <p>Contact Information: <a href="mailto:someone@example.com">someone@example.com</a></p>
+            <p><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
+            <p><a href="impressum.html">Impressum</a></p>
+    </footer>
 </html>

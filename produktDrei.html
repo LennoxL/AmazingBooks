@@ -1,8 +1,44 @@
-<!DOCTYPE html>
+<!DOCTYPE html><!--Landing Page-->
 <html>
     <head>
-        <title>Webshop-Warenkorb</title>
+        <title>Produkt3</title>
+        <link rel = 'stylesheet' href = 'CSS\Webshop-CSS.css'>
     </head>
-    <body>
+        <body>
+            <header>
+                    <div class="navbar">
+                            <a href="./index.html">Indexseite</a>
+                            <a href="./kontakt.html">Contact</a>
+                            <a href="./produktseite.html">Produkübersicht</a>
+                            <a href="./Warenkorb.html"><img src="./Bilder/Warenkorb.jpg" alt="Warenkorb" height="30"></a>
+                          </div>
+            </header>
+        <h1>Produkt 3</h1>
+        <img src="./Bilder/GregsTagebuch.jpeg" class="produktbilder">
+        <div class="produktbeschreibung">
+        <p>Der 13jährige Greg bekommt von seiner Mutter ein Tagebuch zu seinem Geburtstag geschenkt. Trotz anfänglicher Skepsis (Tagebücher seien eigentlich nur etwas für Mädchen, oder?) beginnt er letztendlich darin zu schreiben und zeichnen. Er berichtet über seine lästigen Brüder, seine Eltern, seinen trotteligen Freund Rupert, den täglichen Überlebenskampf in der Schule, ein echt gruseliges Geisterhaus und über den verbotenen Stinkekäse ...</p>
+        </div>
+        <form action="Warenkorb.html" id="form3"> 
+            <div class="kaufen">
+                <label for="preis3">Preis:</label>
+                <input type="text" id="preis3" name="preis3" value = "50 Goldmünzen" disabled>
+                <label for="anzahl3">Anzahl:</label>
+                <input type="number" value="30" id="anzahl3" step="1" style="width: 30px;"/>
+                <input type="submit" value="In Warenkorb packen"> <!--onclick="passvalues();-->
+            </div>
+        </form>
     </body>
+    <script>
+            document.getElementById("form3").onsubmit = function passvalues()
+            {
+                var anzahl = document.getElementById("anzahl3").value;
+                localStorage.setItem("anzahlDrei", anzahl);
+            }
+    </script>
+    <footer>
+            <p>Posted by: Gruppe D</p>
+            <p>Contact Information: <a href="mailto:someone@example.com">someone@example.com</a></p>
+            <p><a href="datenschutzerklaerung.html">Datenschutzerklärung</a></p>
+            <p><a href="impressum.html">Impressum</a></p>
+    </footer>
 </html>
