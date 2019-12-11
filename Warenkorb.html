@@ -84,14 +84,14 @@
             var AnzahlProduktDrei = 0;
             var AnzahlProduktVier = 0;
             var AnzahlProduktFuenf = 0;
-
-            AnzahlProduktEins = localStorage.getItem("anzahlEins");
-            AnzahlProduktZwei = localStorage.getItem("anzahlZwei");
-            AnzahlProduktDrei = localStorage.getItem("anzahlDrei");
-            AnzahlProduktVier = localStorage.getItem("anzahlVier");
-            AnzahlProduktFuenf = localStorage.getItem("anzahlFuenf");
-
             
+            AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins"));
+            AnzahlProduktZwei = parseInt(localStorage.getItem("anzahlZwei"));
+            AnzahlProduktDrei = parseInt(localStorage.getItem("anzahlDrei"));
+            AnzahlProduktVier = parseInt(localStorage.getItem("anzahlVier"));
+            AnzahlProduktFuenf = parseInt(localStorage.getItem("anzahlFuenf"));
+
+
             document.getElementById("anzahl1").innerHTML = AnzahlProduktEins;
             document.getElementById("anzahl2").innerHTML = AnzahlProduktZwei;
             document.getElementById("anzahl3").innerHTML = AnzahlProduktDrei;
@@ -105,7 +105,8 @@
             document.getElementById("WarenkorbPreis4").innerHTML = PreisAllerProdukte;
             document.getElementById("WarenkorbPreis5").innerHTML = PreisAllerProdukte;
 
-            document.getElementById("gesamtanzahl").innerHTML = AnzahlProduktEins + AnzahlProduktZwei + AnzahlProduktDrei + AnzahlProduktVier + AnzahlProduktFuenf;
+            var gesamtanzahl = AnzahlProduktEins + AnzahlProduktZwei + AnzahlProduktDrei + AnzahlProduktVier + AnzahlProduktFuenf;
+            document.getElementById("gesamtanzahl").innerHTML = gesamtanzahl;
             document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins + (PreisAllerProdukte*AnzahlProduktZwei)+(PreisAllerProdukte*AnzahlProduktDrei)+(PreisAllerProdukte*AnzahlProduktVier)+(PreisAllerProdukte*AnzahlProduktFuenf);
         </script>
         
