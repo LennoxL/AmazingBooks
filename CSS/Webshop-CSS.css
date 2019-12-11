@@ -1,5 +1,5 @@
 footer {
-  position: fixed;
+  position: static;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -64,4 +64,8 @@ table td {
 table, th,td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+.einkaufBild {
+  height: 300px;
+  
 }
