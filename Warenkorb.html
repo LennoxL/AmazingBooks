@@ -85,11 +85,26 @@
             var AnzahlProduktVier = 0;
             var AnzahlProduktFuenf = 0;
             
-            AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins"));
-            AnzahlProduktZwei = parseInt(localStorage.getItem("anzahlZwei"));
-            AnzahlProduktDrei = parseInt(localStorage.getItem("anzahlDrei"));
-            AnzahlProduktVier = parseInt(localStorage.getItem("anzahlVier"));
-            AnzahlProduktFuenf = parseInt(localStorage.getItem("anzahlFuenf"));
+            var anzeigen1 = false;
+            var anzeigen2 = false;
+            var anzeigen3 = false;
+            var anzeigen4 = false;
+            var anzeigen5 = false;
+
+            if (localStorage.getItem("anzahlEins") === null) AnzahlProduktEins = 0;
+            else { AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins")); anzeigen1 = true;}
+            
+            if (localStorage.getItem("anzahlZwei") === null) AnzahlProduktZwei = 0;
+            else {AnzahlProduktZwei = parseInt(localStorage.getItem("anzahlZwei")); anzeigen2 = true;}
+
+            if (localStorage.getItem("anzahlDrei") === null) AnzahlProduktDrei = 0;
+            else {AnzahlProduktDrei = parseInt(localStorage.getItem("anzahlDrei")); anzeigen3 = true;}
+
+            if (localStorage.getItem("anzahlVier") === null) AnzahlProduktVier = 0;
+            else {AnzahlProduktVier = parseInt(localStorage.getItem("anzahlVier")); anzeigen4 = true;}
+
+            if (localStorage.getItem("anzahlFuenf") === null) AnzahlProduktFuenf = 0;
+            else {AnzahlProduktFuenf = parseInt(localStorage.getItem("anzahlFuenf")); anzeigen5 = true;}
 
 
             document.getElementById("anzahl1").innerHTML = AnzahlProduktEins;
