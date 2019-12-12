@@ -20,6 +20,7 @@
                     <th>Buch</th>
                     <th>Anzahl</th>
                     <th>Preis</th>
+                    <th>Aus Warenkorb entfernen</th>
                 </tr>
 
                 <tr> <!--Produkt 1-->
@@ -27,6 +28,9 @@
                     <td>Eragon</td>
                     <td><span id="anzahl1"></span></td>
                     <td><span id="WarenkorbPreis1"></span> GMZ</td>
+                    <td><input type="number" id="löschen1" step="1" style="width: 30px;"/>
+                        <input type="submit" value="Aus Warenkorb entfernen">
+                    </td>
                 </tr>
 
                 <tr> <!--Produkt 2-->
@@ -90,6 +94,9 @@
             var anzeigen3 = false;
             var anzeigen4 = false;
             var anzeigen5 = false;
+
+            var warenkorbLöschen1 = 0;
+            AnzahlProduktEins = AnzahlProduktEins - parseInt(document.getElementById("löschen1"));
 
             if (localStorage.getItem("anzahlEins") === null) AnzahlProduktEins = 0;
             else { AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins")); anzeigen1 = true;}
