@@ -124,11 +124,11 @@
             document.getElementById("anzahl5").innerHTML = AnzahlProduktFuenf;
         
 
-            document.getElementById("WarenkorbPreis1").innerHTML = PreisAllerProdukte;
-            document.getElementById("WarenkorbPreis2").innerHTML = PreisAllerProdukte;
-            document.getElementById("WarenkorbPreis3").innerHTML = PreisAllerProdukte;
-            document.getElementById("WarenkorbPreis4").innerHTML = PreisAllerProdukte;
-            document.getElementById("WarenkorbPreis5").innerHTML = PreisAllerProdukte;
+            document.getElementById("WarenkorbPreis1").innerHTML = PreisAllerProdukte * AnzahlProduktEins;
+            document.getElementById("WarenkorbPreis2").innerHTML = PreisAllerProdukte * AnzahlProduktZwei;
+            document.getElementById("WarenkorbPreis3").innerHTML = PreisAllerProdukte * AnzahlProduktDrei;
+            document.getElementById("WarenkorbPreis4").innerHTML = PreisAllerProdukte * AnzahlProduktVier;
+            document.getElementById("WarenkorbPreis5").innerHTML = PreisAllerProdukte * AnzahlProduktFuenf;
 
             var gesamtanzahl = AnzahlProduktEins + AnzahlProduktZwei + AnzahlProduktDrei + AnzahlProduktVier + AnzahlProduktFuenf;
             document.getElementById("gesamtanzahl").innerHTML = gesamtanzahl;
