@@ -27,7 +27,7 @@
                     <td><a href="produktEins.html"><img src="./Bilder/Eragon.jpeg" alt="produkt1" class="warenkorbProduktbilder"></a></td>
                     <td>Eragon</td>
                     <td><span id="anzahl1"></span></td>
-                    <td><span id="WarenkorbPreis1"></span> GMZ</td>
+                    <td><span id="warenkorbPreis1"></span> GMZ</td>
                     <td><input type="number" id="löschen1" step="1" style="width: 30px;"/>
                         <input type="submit" value="Aus Warenkorb entfernen">
                     </td>
@@ -37,28 +37,28 @@
                     <td><a href="produktZwei.html"><img src="./Bilder/DasPaket.jpeg" alt="produkt2"class="warenkorbProduktbilder"></a></td>
                     <td>Das Paket</td>
                     <td><span id="anzahl2"></span></td>
-                    <td><span id="WarenkorbPreis2"></span> GMZ</td>
+                    <td><span id="warenkorbPreis2"></span> GMZ</td>
                 </tr>
 
                 <tr> <!--Produkt 3-->
                     <td><a href="produktDrei.html"><img src="./Bilder/GregsTagebuch.jpeg" alt="produkt3" class="warenkorbProduktbilder"></a></td>
                     <td>Gregs Tagebuch</td>
                     <td><span id="anzahl3"></span></td>
-                    <td><span id="WarenkorbPreis3"></span> GMZ</td>
+                    <td><span id="warenkorbPreis3"></span> GMZ</td>
                 </tr>
 
                 <tr> <!--Produkt 4-->
                     <td><a href="produktVier.html"><img src="./Bilder/Grimms_Märchen.jpeg" alt="produkt4" class="warenkorbProduktbilder"></a></td>
                     <td>Grimms Märchen</td>
                     <td><span id="anzahl4"></span></td>
-                    <td><span id="WarenkorbPreis4"></span> GMZ</td>
+                    <td><span id="warenkorbPreis4"></span> GMZ</td>
                 </tr>
 
                 <tr> <!--Produkt 5-->
                     <td><a href="produktFuenf.html"><img src="./Bilder/KochbuchVerzerrt.jpeg" alt="produkt5" class="warenkorbProduktbilder"></a></td>
                     <td>Kochbuch</td>
                     <td><span id="anzahl5"></span></td>
-                    <td><span id="WarenkorbPreis5"></span> GMZ</td>
+                    <td><span id="warenkorbPreis5"></span> GMZ</td>
                 </tr>
                 <tr>
                     <td></td>
@@ -69,7 +69,7 @@
                 <tr>
                     <td></td>
                     <td></td>
-                    <td><span id="gesamtanzahl"></span></td>
+                    <td><span id="gesamtanzahlWarenkorb"></span></td>
                     <td><span id="endpreis"></span> GMZ</td>
                 </tr>
             </table>
@@ -82,7 +82,7 @@
 
         <script>
             var PreisAllerProdukte = 50;
-
+            
             var AnzahlProduktEins = 0;
             var AnzahlProduktZwei = 0;
             var AnzahlProduktDrei = 0;
@@ -100,7 +100,8 @@
             document.getElementById("löschen1").onclick = function anzahlReduzieren() {
                 AnzahlProduktEins = AnzahlProduktEins - parseInt(document.getElementById("löschen1").value);
             }
-
+            /*Es wird überprüft, ob im local Storage ein Wert steht, der von der Produktseite kommt. Wenn keiner drin steht wird der Wer auf 0
+            gesetzt. Wenn einer drin steht, wird der Wert durch parseInt vom String zum int. */
             if (localStorage.getItem("anzahlEins") === null) AnzahlProduktEins = 0;
             else { AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins")); anzeigen1 = true;}
             
@@ -116,22 +117,25 @@
             if (localStorage.getItem("anzahlFuenf") === null) AnzahlProduktFuenf = 0;
             else {AnzahlProduktFuenf = parseInt(localStorage.getItem("anzahlFuenf")); anzeigen5 = true;}
 
-
+            /*anzahl1 bekommt den Wert von AnzahlProduktEins und anzahl1 wird im Warenkorb an der jeweiligen Stelle bei "Anzahl" angezeigt*/
             document.getElementById("anzahl1").innerHTML = AnzahlProduktEins;
             document.getElementById("anzahl2").innerHTML = AnzahlProduktZwei;
             document.getElementById("anzahl3").innerHTML = AnzahlProduktDrei;
             document.getElementById("anzahl4").innerHTML = AnzahlProduktVier;
             document.getElementById("anzahl5").innerHTML = AnzahlProduktFuenf;
         
-
-            document.getElementById("WarenkorbPreis1").innerHTML = PreisAllerProdukte * AnzahlProduktEins;
-            document.getElementById("WarenkorbPreis2").innerHTML = PreisAllerProdukte * AnzahlProduktZwei;
-            document.getElementById("WarenkorbPreis3").innerHTML = PreisAllerProdukte * AnzahlProduktDrei;
-            document.getElementById("WarenkorbPreis4").innerHTML = PreisAllerProdukte * AnzahlProduktVier;
-            document.getElementById("WarenkorbPreis5").innerHTML = PreisAllerProdukte * AnzahlProduktFuenf;
+            /*warenkorbPreis bekommt den Wert von dem Preis aller Produkte mal die Anzahl, die hinzugefügt wurde und warenkorbPreis wird
+            an der jeweiligen Stelle bei "Preis" angezeigt.*/
+            document.getElementById("warenkorbPreis1").innerHTML = PreisAllerProdukte * AnzahlProduktEins;
+            document.getElementById("warenkorbPreis2").innerHTML = PreisAllerProdukte * AnzahlProduktZwei;
+            document.getElementById("warenkorbPreis3").innerHTML = PreisAllerProdukte * AnzahlProduktDrei;
+            document.getElementById("warenkorbPreis4").innerHTML = PreisAllerProdukte * AnzahlProduktVier;
+            document.getElementById("warenkorbPreis5").innerHTML = PreisAllerProdukte * AnzahlProduktFuenf;
 
             var gesamtanzahl = AnzahlProduktEins + AnzahlProduktZwei + AnzahlProduktDrei + AnzahlProduktVier + AnzahlProduktFuenf;
-            document.getElementById("gesamtanzahl").innerHTML = gesamtanzahl;
+            /*gesamtanzahlWarenkorb bekommt den Wert von Warenkorb und wird an der jeweiligen Stelle bei "Gesamtanzahl" angezeigt.*/
+            document.getElementById("gesamtanzahlWarenkorb").innerHTML = gesamtanzahl;
+            /*endpreis bekommt den Wert von allen Produktanzahlen * den Preis.*/
             document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins + (PreisAllerProdukte*AnzahlProduktZwei)+(PreisAllerProdukte*AnzahlProduktDrei)+(PreisAllerProdukte*AnzahlProduktVier)+(PreisAllerProdukte*AnzahlProduktFuenf);
         </script>
         
