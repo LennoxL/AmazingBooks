@@ -96,7 +96,10 @@
             var anzeigen5 = false;
 
             var warenkorbLöschen1 = 0;
-            AnzahlProduktEins = AnzahlProduktEins - parseInt(document.getElementById("löschen1"));
+
+            document.getElementById("löschen1").onclick = function anzahlReduzieren() {
+                AnzahlProduktEins = AnzahlProduktEins - parseInt(document.getElementById("löschen1").value);
+            }
 
             if (localStorage.getItem("anzahlEins") === null) AnzahlProduktEins = 0;
             else { AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins")); anzeigen1 = true;}
