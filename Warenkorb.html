@@ -142,19 +142,19 @@
             /*Es wird überprüft, ob im local Storage ein Wert steht, der von der Produktseite kommt. Wenn keiner drin steht wird der Wer auf 0
             gesetzt. Wenn einer drin steht, wird der Wert durch parseInt vom String zum int. */
             if (localStorage.getItem("anzahlEins") === null) AnzahlProduktEins = 0;
-            else { AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins")); anzeigen1 = true;}
+            else { AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins"));}
             
             if (localStorage.getItem("anzahlZwei") === null) AnzahlProduktZwei = 0;
-            else {AnzahlProduktZwei = parseInt(localStorage.getItem("anzahlZwei")); anzeigen2 = true;}
+            else {AnzahlProduktZwei = parseInt(localStorage.getItem("anzahlZwei"));}
 
             if (localStorage.getItem("anzahlDrei") === null) AnzahlProduktDrei = 0;
-            else {AnzahlProduktDrei = parseInt(localStorage.getItem("anzahlDrei")); anzeigen3 = true;}
+            else {AnzahlProduktDrei = parseInt(localStorage.getItem("anzahlDrei"));}
 
             if (localStorage.getItem("anzahlVier") === null) AnzahlProduktVier = 0;
-            else {AnzahlProduktVier = parseInt(localStorage.getItem("anzahlVier")); anzeigen4 = true;}
+            else {AnzahlProduktVier = parseInt(localStorage.getItem("anzahlVier"));}
 
             if (localStorage.getItem("anzahlFuenf") === null) AnzahlProduktFuenf = 0;
-            else {AnzahlProduktFuenf = parseInt(localStorage.getItem("anzahlFuenf")); anzeigen5 = true;}
+            else {AnzahlProduktFuenf = parseInt(localStorage.getItem("anzahlFuenf"));}
 
             /*anzahl1 bekommt den Wert von AnzahlProduktEins und anzahl1 wird im Warenkorb an der jeweiligen Stelle bei "Anzahl" angezeigt*/
             document.getElementById("anzahl1").innerHTML = AnzahlProduktEins;
