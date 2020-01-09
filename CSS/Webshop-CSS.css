@@ -11,9 +11,12 @@ footer {
   background-color:grey;
   color: white;
   text-align: center;
+  font-family:Helvetica, "Helvetica Neue", Arial, sans-serif;
 }
 body {
   padding-bottom: 120px;
+  font-family:Helvetica, "Helvetica Neue", Arial, sans-serif;
+  background-color:LightGray;
 }
 .navbar {
   background-color: #333;
