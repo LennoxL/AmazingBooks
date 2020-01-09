@@ -97,7 +97,7 @@
                 </tr>
             </table>
             
-        <form action="erfolgreicherEinkauf.html">
+        <form action="erfolgreicherEinkauf.html" id="erfolgreicherEinkauf">
             <input type="submit" class="inline" name="warenkorbKaufen" id="warenkorbKaufen" value="Kaufen">
         </form>
         <form action="produktseite.html">
@@ -118,6 +118,15 @@
             var anzeigen3 = false;
             var anzeigen4 = false;
             var anzeigen5 = false;
+            
+            document.getElementById("erfolgreicherEinkauf").onsubmit = function einkaufAbgeschlossen() {
+                localStorage.removeItem("anzahlEins");
+                localStorage.removeItem("anzahlZwei");
+                localStorage.removeItem("anzahlDrei");
+                localStorage.removeItem("anzahlVier");
+                localStorage.removeItem("anzahlFuenf");
+                location.reload();
+            }
 
             document.getElementById("loeschen1").onsubmit = function produkt1loeschen() {
                 localStorage.removeItem("anzahlEins");
