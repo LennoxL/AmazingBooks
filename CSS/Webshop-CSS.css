@@ -109,7 +109,7 @@ table, th,td {
   }
 
 #slideshow figure{
-    position: absolute;
+    position: fixed;
     animation-name: wechseln ;
     animation-duration: 10s;
     animation-iteration-count: infinite;
