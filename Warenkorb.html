@@ -98,8 +98,9 @@
             </table>
             
         <form action="erfolgreicherEinkauf.html" id="erfolgreicherEinkauf">
-            <input type="submit" class="inline" name="warenkorbKaufen" id="warenkorbKaufen" value="Kaufen">
+            <input type="submit" name="warenkorbKaufen" id="warenkorbKaufen" value="Kaufen">
         </form>
+
         <form action="produktseite.html">
             <input type="submit" class="inline" name="weiterShoppen" id="weiterShoppen" value="Einkauf fortsetzen">
         </form>
@@ -113,11 +114,11 @@
             var AnzahlProduktVier = 0;
             var AnzahlProduktFuenf = 0;
             
-            var anzeigen1 = false;
+            /*var anzeigen1 = false;
             var anzeigen2 = false;
             var anzeigen3 = false;
             var anzeigen4 = false;
-            var anzeigen5 = false;
+            var anzeigen5 = false;*/
             
             document.getElementById("erfolgreicherEinkauf").onsubmit = function einkaufAbgeschlossen() {
                 localStorage.removeItem("anzahlEins");
@@ -148,7 +149,7 @@
                 localStorage.removeItem("anzahlFuenf");
                 location.reload();
             }
-            /*Es wird überprüft, ob im local Storage ein Wert steht, der von der Produktseite kommt. Wenn keiner drin steht wird der Wer auf 0
+            /*Es wird überprüft, ob im local Storage ein Wert steht, der von der Produktseite kommt. Wenn keiner drin steht wird der Wert auf 0
             gesetzt. Wenn einer drin steht, wird der Wert durch parseInt vom String zum int. */
             if (localStorage.getItem("anzahlEins") === null) AnzahlProduktEins = 0;
             else { AnzahlProduktEins = parseInt(localStorage.getItem("anzahlEins"));}
@@ -187,8 +188,10 @@
             document.getElementById("warenkorbPreis5").innerHTML = preisProduktFuenf;
 
             var gesamtanzahl = AnzahlProduktEins + AnzahlProduktZwei + AnzahlProduktDrei + AnzahlProduktVier + AnzahlProduktFuenf;
+
             /*gesamtanzahlWarenkorb bekommt den Wert von Warenkorb und wird an der jeweiligen Stelle bei "Gesamtanzahl" angezeigt.*/
             document.getElementById("gesamtanzahlWarenkorb").innerHTML = gesamtanzahl;
+            
             /*endpreis bekommt den Wert von allen Produktanzahlen * den Preis.*/
             document.getElementById("endpreis").innerHTML = PreisAllerProdukte*AnzahlProduktEins + (PreisAllerProdukte*AnzahlProduktZwei)+(PreisAllerProdukte*AnzahlProduktDrei)+(PreisAllerProdukte*AnzahlProduktVier)+(PreisAllerProdukte*AnzahlProduktFuenf);
         </script>
