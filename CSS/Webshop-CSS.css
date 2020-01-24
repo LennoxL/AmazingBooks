@@ -1,9 +1,4 @@
 footer {
-  /*position: ;
-  width: 100%;
-  background-color: darkgray;
-  color: white;
-  text-align: center;*/
   position: fixed;
   left: 0;
   bottom: 0;
@@ -38,10 +33,10 @@ body {
   background-color: #ddd;
   color: black;
 }
-.navbar a.active {
+/*.navbar a.active {
   background-color: #4CAF50;
   color: white;
-}
+}*/
 .produkte img {
   height: 300px;
   margin-top: 15px;
@@ -84,11 +79,11 @@ table, th,td {
   height: 300px;
   
 }
-.inline{
+/*.inline{
   display:inline-block;
    margin-right:5px;
 }
-
+*/
 .slideshow-Bilder img {
   height: 800px; 
 }
